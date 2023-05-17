@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark shadow">
+        <div class="px-3">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/static" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" fill="currentColor" class="bi bi-ev-front"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M9.354 4.243a.188.188 0 0 0-.085-.218.186.186 0 0 0-.23.034L6.051 7.246a.188.188 0 0 0 .136.316h1.241l-.673 2.195a.188.188 0 0 0 .085.218c.075.043.17.03.23-.034l2.88-3.187a.188.188 0 0 0-.137-.316H8.572l.782-2.195Z" />
+                        <path
+                            d="M4.819 2A2.5 2.5 0 0 0 2.52 3.515l-.792 1.848a.807.807 0 0 1-.38.404c-.5.25-.855.715-.965 1.262L.05 8.708a2.5 2.5 0 0 0-.049.49v.413c0 .814.39 1.543 1 1.997V13.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1.338c1.292.048 2.745.088 4 .088s2.708-.04 4-.088V13.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1.892c.61-.454 1-1.183 1-1.997v-.413c0-.165-.016-.329-.049-.49l-.335-1.68a1.807 1.807 0 0 0-.964-1.261.807.807 0 0 1-.381-.404l-.792-1.848A2.5 2.5 0 0 0 11.181 2H4.82ZM3.44 3.91A1.5 1.5 0 0 1 4.82 3h6.362a1.5 1.5 0 0 1 1.379.91l.792 1.847a1.8 1.8 0 0 0 .853.904c.222.112.381.32.43.564l.336 1.679c.02.097.029.195.029.294v.413a1.48 1.48 0 0 1-1.408 1.484c-1.555.07-3.786.155-5.592.155-1.806 0-4.037-.084-5.592-.155A1.479 1.479 0 0 1 1 9.611v-.413c0-.099.01-.197.03-.294l.335-1.68a.807.807 0 0 1 .43-.563c.383-.19.685-.511.853-.904l.792-1.848Z" />
+                    </svg>
+                    <span class="fs-3 mx-3"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        Rent a Car
+                    </span>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <!--Ekstra Link İstenirse buraya konulabilir-->
+                </ul>
+
+                <div class="text-end">
+                    <p class="fs-5 mt-2">Hoşgeldiniz <span id="welcome"></span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-4 border mt-4 rounded-2 shadow">
+        <nav>
+            <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">Profil</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false"
+                    tabindex="-1">Araçlar</button>
+                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                    type="button" role="tab" aria-controls="nav-contact" aria-selected="false"
+                    tabindex="-1 ">İşlemler</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <h1 class="text-center">Kişisel Bilgiler</h1>
+                <hr>
+                <form action="">
+                    <div class="row mt-4">
+                        <div class="col-md-4 p-3">
+                            <label for="name" class="mb-2">İsim</label>
+                            <input type="text" class="form-control mb-3" id="name"  >
+                        </div>
+                        <div class="col-md-4 p-3 text-center">
+                            <label for="surname" class="mb-2">Soyisim</label>
+                            <input type="text" class="form-control mb-3 text-center" id="surname">
+                        </div>
+                        <div class="col-md-4 p-3 text-end">
+                            <label for="phone" class="mb-2">Telefon</label>
+                            <input type="text" class="form-control mb-3 text-end" id="phone"  disabled>
+                        </div>
+                        <hr>
+                        <div class="col-md-4 p-3">
+                            <label for="username" class="mb-2">Kullanıcı Adı</label>
+                            <input type="text" class="form-control mb-3" id="username"  >
+                        </div>
+                        <div class="col-md-4 p-3 text-end">
+                            <label for="birthdate" class="mb-2">Doğum Günü</label>
+                            <input type="date" class="form-control mb-3 text-center" id="birthdate"  disabled>
+                        </div>
+                        <div class="col-md-4 p-3 text-end">
+                            <label for="license-year" class="mb-2">Ehliyet Yılı</label>
+                            <input type="date" class="form-control mb-3 text-center" id="license-year"  disabled>
+                        </div>
+                        <hr>
+                        <div class="col-12 text-center mt-2">
+                            <h4 class="m-0">Şifre Değiştir</h4>
+                        </div>
+                        <div class="col-md-6 p-3">
+                            <label for="old-pass" class="mb-2">Mevcut Şifre</label>
+                            <input type="password" class="form-control mb-2" id="old-pass" placeholder="Current Password" required>
+                        </div>
+                        <div class="col-md-6 p-3 text-end">
+                            <label for="new-pass" class="mb-2">Yeni Şifre</label>
+                            <input type="password" class="form-control mb-2" id="new-pass" placeholder="New Password" required>
+                            <input type="hidden" class="form-control mb-2" id="status" placeholder="New Password" >
+                        </div>
+                        <hr>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 p-3 text-center">
+                            <button type="submit" class="btn btn-lg btn-success" onclick="updateCustom()">Kaydet</button>
+                        </div>
+                        <div class="col-md-4"></div>
+
+                        <div class="col-12 text-center mt-2">
+                            <button type="submit" class="btn btn-danger btn-sm" id="onay" onclick="deleteCustom()">Hesabı Sil</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <h1 class="text-center">ARAÇLAR</h1>
+                <div class="row p-3 shadow m-3 rounded-3" id="car-list" >
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" onclick="rentedList()">
+                <h1 class="text-center">İşlemler</h1>
+                <div class="p-3 w-100">
+                    <div class="row shadow mx-2 mt-3" >
+                        <div className='col-md-4 text-center p-3' id="rent-list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script> //araç kiralama
+        function makeRent(formId) {
+            const plateNumber = document.getElementById('plateNumber' + formId).value;
+            const phoneNumber = document.getElementById('phoneNumber' + formId).value;
+            const rentEndDate = document.getElementById('RentEndDate' + formId).value;
+            const status_ = document.getElementById('status' + formId).value;
+            const data = {
+                carPlateNum: plateNumber,
+                customerPhoneNum: phoneNumber,
+                returnDate: rentEndDate,
+                status: status_
+            };
+            const jsonData = JSON.stringify(data);
+            $.ajax({
+                type: 'POST',
+                url: '/per-rent',
+                data: jsonData,
+                contentType: 'application/json',
+                success: function(response) {
+                    alert(response + "Araç "+data[i].car.plateNumber+" rezerve edildi. Bayiden Alabilirsiniz.")
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                    alert(xhr)
+                    alert(error)
+                    alert(status)
+                }
+
+            });
+        }
+
+    </script>
+    <script> //araba listeleme
+        $(document).ready(function() {
+            let today = new Date();
+            let dd = String(today.getDate()).padStart(2, '0');
+            let mm = String(today.getMonth() + 1).padStart(2, '0'); // Ocak ayı 0'dan başlar
+            let yyyy = String(today.getFullYear());
+
+            today = yyyy + '-' + mm + '-' + dd;
+
+            console.log(today);
+
+            $('#welcome').text(localStorage.getItem("username"));
+
+            $.ajax({
+                method: "GET",
+                url: "/per/" + localStorage.getItem("phoneNumber"),
+                contentType: "application/json",
+                success: function(response) {
+                    console.log(response);
+                    $('#name').val(response.name);
+                    $('#surname').val(response.lastname);
+                    $('#phone').val(response.phoneNumber);
+                    $('#username').val(response.username);
+                    $('#birthdate').val(response.birthdate);
+                    $('#license-year').val(response.licenseYear);
+                    $('#status').val(response.status);
+
+                }
+            });
+            $.ajax({
+                method: "GET",
+                url: "/car/ava",
+                contentType: "application/json",
+                success: function(response) {
+                    var html = "";
+                    var i = 0;
+                    console.log(response);
+
+                    $.each(response,function (index, value) { i++;
+                        html +=
+                            "<div class='col-md-3'>" +
+                            "<img src='images/1.jpg' height='100px' class='w-100 img-fluid rounded-4'>" +
+                            "</div>" +
+                            "<div class='col-md-3'>" +
+                            "<p class='m-1'><b>Model Yılı:</b>" + value.productYear + "</p>" +
+                            "<p class='m-1'><b>Yakıt Tipi:</b>"+ value.fuelType + "</p>" +
+                            "<p class='m-1'><b>Araç KM'si:</b> "+ value.mileage + "</p>" +
+                            "</div>" +
+                            "<div class='col-md-3'>" +
+                            "<p class='m-1'><b>Araç Tipi:</b>"+ value.carType + "</p>" +
+                            "<p class='m-1'><b>Araç Rengi:</b> "+ value.color + "</p>" +
+                            "<p class='m-1'><b>Koltuk Sayısı:</b>"+ value.seatCount + "</p>" +
+                            "</div>" +
+                            "<div class='col-md-3 text-center'>" +
+                            "<h2>"+ value.brand + "</h2>" +
+                            "<p class='m-1'><b>Plaka Numarası:</b>"+ value.plateNumber + "</p>" +
+                            "<p class='m-0'><b>Ücret:</b>"+ value.dailyPrice + "/Gün<sub></sub></p>" +
+                            "<p class='m-0'><b>Durumu:</b> Kiralanabilir <sub></sub></p>" +
+                            "</div>" +
+                            "<div class='accordion mt-4'>" +
+                            "<div class='accordion-item shadow'>" +
+                            "<h2 class='accordion-header'>" +
+                            "<button class='accordion-button collapsed bg-warning fs-4' type='button' data-bs-toggle='collapse' data-bs-target='#collapseForm" + i + "' aria-expanded='false' aria-controls='collapseForm" + i + "'>" +
+                            "<b>ARACI KİRALA</b>" +
+                            "</button>" +
+                            "</h2>" +
+                            "</div>" +
+                            "</div>"+
+                            "<div id='collapseForm" + i + "' class='accordion-collapse collapse shadow'>" +
+                            "<form class='accordion-body' >" +
+                            "<div class='row w-100'>" +
+                            "<div class='col-md-4'>" +
+                            "<label for='RentStartDate" + i + "' class='mb-2'>Başlangıç Tarihi</label>" +
+                            "<input type='date' id='RentStartDate" + i + "' class='form-control mb-2' value='" + today + "' disabled>" +
+                            "</div>" +
+                            "<div class='col-md-4'>" +
+                            "<label for='RentEndDate" + i + "' class='mb-2'>Bitiş Tarihi</label>" +
+                            "<input type='date' id='RentEndDate" + i + "' class='form-control mb-2'>" +
+                            "<input type='hidden' id='plateNumber" + i + "' value='"+value.plateNumber+"' class='form-control mb-2'>" +
+                            "<input type='hidden' id='phoneNumber" + i + "' value='"+ localStorage.getItem("phoneNumber")+"' class='form-control mb-2'>" +
+                            "<input type='hidden' id='status" + i + "' value='RESERVED' class='form-control mb-2'>" +
+                            "</div>" +
+                            "<div class='col-md-4'>" +
+                            "</div>"+
+                            "<div class='col-12 text-center mt-2'>"+
+                            "<button type='button' class='btn btn-outline-secondary' onclick='makeRent(" + i + ")'>Kirala</button> </div>"+
+                            "</div>"+
+                            "</form>"+
+                            "</div>"+
+                            "</div>"+
+                            "</div>";
+                    });
+                    $('#car-list').html(html);
+                }
+            });
+
+        });
+
+    </script>
+    <script> //islemler
+    function rentedList(){
+    $.ajax({
+        method: "GET",
+        url: "/per-rent/findByPer",
+        data: { phoneNum: localStorage.getItem("phoneNumber") },
+        dataType: "json",
+        success: function(data) {
+            console.log(data)
+
+            for (var i = 0; i < data.length; i++) {
+                var id = data[i].id;
+                var plateNumber = data[i].car.plateNumber;
+                var brand = data[i].car.brand;
+                var model = data[i].car.model;
+                var returnDate = data[i].returnDate;
+                var status = data[i].status;
+                var html = "";
+
+                html += " <div className='col-md-4 text-center p-3'>" +
+                    "<p><b>ID:</b> " + id + "</p>" +
+                    "<p><b>Marka:</b>" + brand + "</p>" +
+                    "</div>" +
+                    " <div className='col-md-4 text-center p-3'>" +
+                    "<p><b>Model:</b>" + model + "</p>" +
+                    "<p className='m-0'><b>Plaka Numarası:</b>" + plateNumber + "</p>" +
+                    "</div>" +
+                    " <div className='col-md-4 text-center p-3'>" +
+                    "<p className='m-0'><b>Teslim Tarihi:</b> " + returnDate + "</p>" +
+                    "<p className='m-0'><b>Durumu:</b> " + status + "</p>" +
+                    "</div>";
+            }
+            $('#rent-list').html(html);
+        }
+    });
+    }
+</script>
+    <script >
+function updateCustom(){
+    const name = $('#name').val();
+    const lastname = $('#surname').val();
+    const phoneNumber = $('#phone').val();
+    const username = $('#username').val();
+    const birthdate = $('#birthdate').val();
+    const licenseYear = $('#license-year').val();
+    const status = $('#status').val();
+    const password = $('#new-pass').val();
+    const customerData = {
+        name: name,
+        lastname: lastname,
+        phoneNumber: phoneNumber,
+        username: username,
+        password: password,
+        status: status,
+        birthdate: birthdate,
+        licenseYear: licenseYear
+    };
+    $.ajax({
+        method: "PUT",
+        url: "/per/" + phoneNumber,
+        dataType: "json",
+        data: JSON.stringify(customerData),
+        contentType: "application/json",
+        success: function(response) {
+            console.log(response);
+            alert("User updated successfully!");
+        },
+
+    });
+}
+
+function deleteCustom(){
+
+    $.ajax({
+        method: "DELETE",
+        url: "/per/"+localStorage.getItem("phoneNumber"),
+        dataType: "json",
+        contentType: 'application/json',
+        success: function(response) {
+            console.log(response);
+            alert('User deleted successfully!');
+            window.location.href = "index.html";
+        },
+        error: function(error) {
+            console.log(error);
+            alert('Error updating user!');
+        }
+    });
+}
+    </script>
+</body>
+</html>
